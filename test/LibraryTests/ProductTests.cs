@@ -15,7 +15,7 @@ namespace LibraryTests
         {
             string description = "Test Product";
             double unitCost = 9.99;
-            string expected = $@"{{""Description"":""{description}"",""UnitCost"":{unitCost}}}";
+            string expected = $@"{{""Description"":""{description}"",""UnitCost"":9.99}}";
 
             IJsonConvertible Product = new Product(description, unitCost);
             string actual = Product.ConvertToJson();
@@ -28,7 +28,7 @@ namespace LibraryTests
         {
             string description = "Test Product";
             double unitCost = 9.99;
-            string json = $@"{{""Description"":""{description}"",""UnitCost"":{unitCost}}}";
+            string json = $@"{{""Description"":""{description}"",""UnitCost"":9.99}}";
 
             Product Product = new Product(json);
 
